@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(44, 47, 39);
+    color:#fff;
+    line-height: 2;
+    text-align: center;
+
+}
+
+.container{
+    max-width: 960px;
+    margin: auto;
+    padding: 20px 30px;
+}
+#showcase{
+    height: 300px;
+}
+
+#showcase h1{
+    font-size: 50px;
+    line-height: 1.4;
+    position: relative;
+    animation:heading;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+    0%{ top: -70px;}
+    100%{top: 120px;}
+}
+
+#content{
+    position: relative;
+    animation-name: content;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+   
+}
+
+
+/*keyframe for the content that is coming from the left*/
+@keyframes content {
+    0%{ left: -1000px;}
+    100%{left: 0;} 
+}
+
+.btn{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: #fff 1px solid;
+
+    opacity: 0;
+    animation-name: btn ;
+    animation-duration:3s ;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.btn:hover{
+    transform: rotateX(180deg);
+    background-color: rgb(37, 104, 161);
+
+}
+
+
+@keyframes btn {
+    0%{ opacity: 0;}
+    100%{ opacity: 1; } 
+}
+
+.picture{
+  
+    opacity: 0;
+    max-height: 350px;
+    margin: auto;
+    padding: 20px 30px;
+    animation-name: image;
+    animation-duration:3s ;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes image{
+    0%{ opacity: 0; border-radius: 0%;}
+    100%{ opacity: 1; border-radius: 25%;} 
+
+}
